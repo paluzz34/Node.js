@@ -12,7 +12,15 @@ function luckyDraw(player) {
     });
 }
 
-luckyDraw("joe")
+luckyDraw('Joe') .then(data => { 
+console.log(data);
+return luckyDraw('Caroline') }) 
+.then(data => { console.log(data); 
+    return luckyDraw('Sabrina') }) 
+    .then(data => { console.log(data); 
+    }).catch((err) => console.log(err))
+
+/*luckyDraw("joe")
     .then((result) => {
         console.log(result);
     })
@@ -33,4 +41,4 @@ luckyDraw("Sabrina")
     })
     .catch((err) => {
         console.error(err.message);
-    });
+    });*/
