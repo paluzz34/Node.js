@@ -1,15 +1,11 @@
 const express = require('express');
 require('dotenv').config();
-const morgan = require('morgan');
-require('express-async-errors');
+
 
 // Inizializza l'app Express
 const app = express();
 
 app.use(express.json());
-
-// Configura l'app Express per registrare le richieste del client
-app.use(morgan('dev'));
 
 // Dummy database di pianeti
 let planets = [
